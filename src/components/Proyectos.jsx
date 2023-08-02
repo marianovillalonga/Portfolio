@@ -1,7 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
 import imagenProyecto1 from '../img/proyecto1.jpg';
 import imagenProyecto2 from '../img/proyecto2.jpg';
 import imagenProyecto3 from '../img/proyecto3.jpg';
+
+const LinkButton = styled.a`
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #3498db;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  /* Estilo para el efecto :hover */
+  &:hover {
+    background-color: #2980b9; /* Cambia el color al pasar el mouse por encima */
+  }
+`;
 
 const Proyectos = () => {
   
@@ -38,9 +54,9 @@ const Proyectos = () => {
             <img src={proyecto.imagen} alt={proyecto.nombre} style={styles.image} />
             <h3 style={styles.projectName}>{proyecto.nombre}</h3>
             <p style={styles.description}>{proyecto.descripcion}</p>
-            <a href={proyecto.enlace} target="_blank" rel="noopener noreferrer" style={styles.link}>
+            <LinkButton href={proyecto.enlace} target="_blank" rel="noopener noreferrer">
               Ver proyecto
-            </a>
+            </LinkButton>
           </div>
         ))}
       </div>
@@ -97,6 +113,10 @@ const styles = {
     borderRadius: '5px',
     textDecoration: 'none',
     transition: 'background-color 0.3s ease',
+    /* Nuevo estilo para el efecto :hover */
+    ':hover': {
+      backgroundColor: '#2980b9', // Cambia el color al pasar el mouse por encima
+    },
   },
 };
 
