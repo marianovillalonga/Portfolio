@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contacto = () => {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <section style={styles.container} id="contacto">
       <div style={styles.content}>
@@ -19,7 +21,14 @@ const Contacto = () => {
             <label style={styles.label} htmlFor="mensaje">Mensaje:</label>
             <textarea style={styles.textarea} id="mensaje" name="mensaje" rows="4" required />
           </div>
-          <button style={styles.submitButton} type="submit">Enviar mensaje</button>
+          <button
+            style={{ ...styles.submitButton, ...(hovered && styles.submitButtonHovered) }}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            type="submit"
+          >
+            Enviar mensaje
+          </button>
         </form>
       </div>
     </section>
@@ -80,10 +89,15 @@ const styles = {
     fontSize: '18px',
     color: '#fff',
     backgroundColor: '#3498db',
+    backgroundColor: '#3498db',
+    transition: 'background-color 0.3s ease',
     borderRadius: '5px',
     border: 'none',
     cursor: 'pointer',
-    transition: 'background-color 0.3s ease',
+  },
+  submitButtonHovered: {
+    backgroundColor: '#2980b9',
+    boxShadow: '0 0 5px rgba(0, 0, 0, 0.3)',
   },
 };
 
