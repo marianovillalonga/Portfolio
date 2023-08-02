@@ -21,9 +21,11 @@ const SobreMi = () => {
         <div style={styles.aboutMe}>
           <img src={imagen} alt="Foto de Perfil" style={styles.profileImage} />
           <p style={styles.description}>
-            ¡Hola! Soy Mariano Villalonga, un apasionado desarrollador fullstack con experiencia en React, NodeJS, MySql,
-            redux, javascript, Git, GitHub, PHP, Express.
-            Aquí puedes describir tus habilidades, intereses, experiencia laboral, proyectos destacados, etc.
+            ¡Hola! Soy Mariano Villalonga, un apasionado desarrollador fullstack de Argentina!.
+            <br />
+            <br />
+            Me encanta aprender nuevas tecnologías y aplicarlas en mis proyectos. Actualmente estoy
+            trabajando en Cobromix y tutor en CoderHouse.
           </p>
         </div>
         <div style={styles.cvButtonContainer}>

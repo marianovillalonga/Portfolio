@@ -4,6 +4,7 @@ import Inicio from './components/Inicio'
 import VistosoCard from './components/Skill'
 import SobreMi from './components/Sobremi'
 import Proyectos from './components/Proyectos'
+import Experiencia from './components/Experiencia'
 import Contacto from './components/Contactos'
 import Footer from './components/Footer'
 
@@ -15,6 +16,7 @@ function App() {
           <Menu />
           <Inicio />
           <SobreMi />
+          <Experiencia />
           <VistosoCard />
           <Proyectos />
           <Contacto />
