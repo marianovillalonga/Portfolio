@@ -1,4 +1,7 @@
 import React from 'react';
+import imagenProyecto1 from '../img/proyecto1.jpg';
+import imagenProyecto2 from '../img/proyecto2.jpg';
+import imagenProyecto3 from '../img/proyecto3.jpg';
 
 const Proyectos = () => {
   
@@ -7,29 +10,22 @@ const Proyectos = () => {
       id: 1,
       nombre: 'Proyecto 1',
       descripcion: 'Descripción del Proyecto 1...',
-      imagen: 'ruta/imagen-proyecto-1.jpg',
-      enlace: 'https://www.ejemplo.com/proyecto1',
+      imagen: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/...',
+      enlace: imagenProyecto1
     },
     {
       id: 2,
       nombre: 'Proyecto 2',
       descripcion: 'Descripción del Proyecto 2...',
-      imagen: 'ruta/imagen-proyecto-2.jpg',
-      enlace: 'https://www.ejemplo.com/proyecto2',
-    },
-    {
-        id: 3,
-        nombre: 'Proyecto 3',
-        descripcion: 'Descripción del Proyecto 2...',
-        imagen: 'ruta/imagen-proyecto-2.jpg',
-        enlace: 'https://www.ejemplo.com/proyecto2',
+      imagen: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/...',
+      enlace: imagenProyecto2
     },
     {
       id: 3,
-      nombre: 'Proyecto 4',
-      descripcion: 'Descripción del Proyecto 2...',
-      imagen: 'ruta/imagen-proyecto-2.jpg',
-      enlace: 'https://www.ejemplo.com/proyecto2',
+      nombre: 'Proyecto 3',
+      descripcion: 'Descripción del Proyecto 3...',
+      imagen: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/...',
+      enlace: imagenProyecto3
     },
   ];
 

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Menu from './components/Menu'
 import Inicio from './components/Inicio'
+import VistosoCard from './components/Skill'
 import SobreMi from './components/Sobremi'
 import Proyectos from './components/Proyectos'
 import Contacto from './components/Contactos'
@@ -14,6 +15,7 @@ function App() {
           <Menu />
           <Inicio />
           <SobreMi />
+          <VistosoCard />
           <Proyectos />
           <Contacto />
           <Footer />

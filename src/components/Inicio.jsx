@@ -2,7 +2,7 @@ import React from 'react';
 
 const Inicio = () => {
   return (
-    <section style={styles.container} id="inicio">
+    <section style={{ ...styles.container, marginTop: '80px' }} id="inicio">
       <div style={styles.content}>
         <h1 style={styles.title}>¡Bienvenido a mi Portfolio!</h1>
         <p style={styles.description}>Aquí puedes encontrar información sobre mí y mis proyectos.</p>
