@@ -31,7 +31,7 @@ const SobreMi = () => {
         <div style={styles.cvButtonContainer}>
           <a
             href={cvPDF}
-            download="CV_Mariano_Villalonga.pdf"
+            download="MarianoVillalonga.pdf"
             style={{
               ...styles.cvButton,
               ...(hover ? styles.cvButtonHover : {}),
