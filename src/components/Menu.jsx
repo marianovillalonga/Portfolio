@@ -18,10 +18,9 @@ const Menu = () => {
     if (targetElement) {
       window.scrollTo({
         top: targetElement.offsetTop,
-        behavior: 'smooth', // Esta propiedad habilita el desplazamiento suave
+        behavior: 'smooth'
       });
 
-      // Cierra el menú en dispositivos móviles después de hacer clic en un enlace
       if (isMobile) {
         handleMenuClick();
       }
@@ -30,7 +29,7 @@ const Menu = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) { // Cambia este valor según cuánto deseas que el usuario desplace la página antes de aplicar el estilo
+      if (window.scrollY > 100) {
         setScrolling(true);
       } else {
         setScrolling(false);
@@ -211,8 +210,7 @@ const styles = {
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   },
   scrollingMenu: {
-    background: '#222', // Cambia el color de fondo según tus preferencias
-    // Agrega cualquier otro estilo adicional aquí
+    background: '#222'
   },
 };
 
