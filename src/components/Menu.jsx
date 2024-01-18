@@ -4,15 +4,50 @@ import { useMediaQuery } from 'react-responsive';
 const Menu = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
 
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleScrollTo = (event, targetId) => {
+    event.preventDefault();
+
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth', // Esta propiedad habilita el desplazamiento suave
+      });
+
+      // Cierra el menú en dispositivos móviles después de hacer clic en un enlace
+      if (isMobile) {
+        handleMenuClick();
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) { // Cambia este valor según cuánto deseas que el usuario desplace la página antes de aplicar el estilo
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       {/* Menú fijo */}
-      <div style={styles.fixedMenu}>
+      <div style={scrolling ? { ...styles.fixedMenu, ...styles.scrollingMenu } : styles.fixedMenu}>
         <nav style={styles.nav}>
           {isMobile ? (
             <div style={styles.menuContainer}>
@@ -42,22 +77,22 @@ const Menu = () => {
               {isMenuOpen && (
                 <ul style={{ ...styles.menuOptions, display: 'flex', flexDirection: 'column' }}>
                   <li style={styles.menuItem}>
-                    <a href="#inicio" style={styles.menuLink}>
+                    <a href="#inicio" onClick={(e) => handleScrollTo(e, '#inicio')} style={styles.menuLink}>
                       Inicio
                     </a>
                   </li>
                   <li style={styles.menuItem}>
-                    <a href="#sobremi" style={styles.menuLink}>
+                    <a href="#sobremi" onClick={(e) => handleScrollTo(e, '#sobremi')} style={styles.menuLink}>
                       Sobre Mí
                     </a>
                   </li>
                   <li style={styles.menuItem}>
-                    <a href="#proyectos" style={styles.menuLink}>
+                    <a href="#proyectos" onClick={(e) => handleScrollTo(e, '#proyectos')} style={styles.menuLink}>
                       Mis Proyectos
                     </a>
                   </li>
                   <li style={styles.menuItem}>
-                    <a href="#contacto" style={styles.menuLink}>
+                    <a href="#contacto" onClick={(e) => handleScrollTo(e, '#contacto')} style={styles.menuLink}>
                       Contacto
                     </a>
                   </li>
@@ -72,22 +107,22 @@ const Menu = () => {
               <nav style={styles.nav}>
                 <ul style={styles.navList}>
                   <li style={styles.menuItem}>
-                    <a href="#inicio" style={styles.menuLink}>
+                    <a href="#inicio" onClick={(e) => handleScrollTo(e, '#inicio')} style={styles.menuLink}>
                       Inicio
                     </a>
                   </li>
                   <li style={styles.menuItem}>
-                    <a href="#sobremi" style={styles.menuLink}>
+                    <a href="#sobremi" onClick={(e) => handleScrollTo(e, '#sobremi')} style={styles.menuLink}>
                       Sobre Mí
                     </a>
                   </li>
                   <li style={styles.menuItem}>
-                    <a href="#proyectos" style={styles.menuLink}>
+                    <a href="#proyectos" onClick={(e) => handleScrollTo(e, '#proyectos')} style={styles.menuLink}>
                       Mis Proyectos
                     </a>
                   </li>
                   <li style={styles.menuItem}>
-                    <a href="#contacto" style={styles.menuLink}>
+                    <a href="#contacto" onClick={(e) => handleScrollTo(e, '#contacto')} style={styles.menuLink}>
                       Contacto
                     </a>
                   </li>
@@ -174,6 +209,10 @@ const styles = {
     zIndex: 1000,
     background: '#3498db',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  },
+  scrollingMenu: {
+    background: '#222', // Cambia el color de fondo según tus preferencias
+    // Agrega cualquier otro estilo adicional aquí
   },
 };
 

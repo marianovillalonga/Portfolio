@@ -15,7 +15,7 @@ const SobreMi = () => {
   };
 
   return (
-    <section style={styles.container} id="sobre-mi">
+    <section style={styles.container} id="sobremi">
       <div style={styles.content}>
         <h2 style={styles.title}>Sobre Mí</h2>
         <div style={styles.aboutMe}>
