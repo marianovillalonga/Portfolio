@@ -35,7 +35,7 @@ const VistosoCard = () => {
           </div>
           <div className="skill-item">
           <MDBIcon fab icon="mdb" style={{ fontSize: '2.5rem', marginRight: '0.5rem' }} />
-            <span className="skill-name">NodeJS</span>
+            <span className="skill-name">MongoDB</span>
           </div>
         </div>
       </div>
