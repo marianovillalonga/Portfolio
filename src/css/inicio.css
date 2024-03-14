@@ -1,35 +1,29 @@
 /* Inicio.css */
 .inicio-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(45deg, #3498db, #8e44ad);
     color: #fff;
-    animation: fadeIn 1s ease;
 }
 
 .inicio-content {
     text-align: center;
     max-width: 600px;
+    position: relative;
+    z-index: 1;
 }
 
 .inicio-title {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: black;
 }
 
 .inicio-description {
     font-size: 20px;
     line-height: 1.6;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    color: black;
 }
