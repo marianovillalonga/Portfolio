@@ -19,8 +19,7 @@ const Experiencia = () => {
         <MDBCard style={{ maxWidth: '400px', width: '100%' }}>
           <MDBCardBody>
             <MDBCardTitle>Cobromix </MDBCardTitle>
-            <MDBCardText>Herramientas utilizadas:</MDBCardText>
-            <MDBCardSubTitle>NodeJS, express, React, redux, MySql, Next.</MDBCardSubTitle>
+            <MDBCardText>NodeJS, express, React, redux, MySql, Next.</MDBCardText>
             <MDBBtn href='https://www.linkedin.com/company/cobromix/'>Linkedin de la empresa</MDBBtn>
           </MDBCardBody>
         </MDBCard>
@@ -30,9 +29,28 @@ const Experiencia = () => {
         <MDBCard style={{ maxWidth: '400px', width: '100%' }}>
           <MDBCardBody>
             <MDBCardTitle>Coderhouse </MDBCardTitle>
-            <MDBCardText>Herramientas utilizadas:</MDBCardText>
-            <MDBCardSubTitle>NodeJS, express, mongoDB, MySql.</MDBCardSubTitle>
+            <MDBCardText>NodeJS, express, mongoDB, MySql.</MDBCardText>
             <MDBBtn href='https://www.linkedin.com/school/coderhouse/'>Linkedin de la empresa</MDBBtn>
+          </MDBCardBody>
+        </MDBCard>
+      </div>
+      <div style={{ marginBottom: '20px' }}></div>
+      <div className="d-flex justify-content-center align-items-center">
+        <MDBCard style={{ maxWidth: '400px', width: '100%' }}>
+          <MDBCardBody>
+            <MDBCardTitle>Version Dos</MDBCardTitle>
+            <MDBCardText>PHP, JavaScript, MySql.</MDBCardText>
+            <MDBBtn href='https://www.linkedin.com/company/version-dos/'>Linkedin de la empresa</MDBBtn>
+          </MDBCardBody>
+        </MDBCard>
+      </div>
+      <div style={{ marginBottom: '20px' }}></div>
+      <div className="d-flex justify-content-center align-items-center">
+        <MDBCard style={{ maxWidth: '400px', width: '100%' }}>
+          <MDBCardBody>
+            <MDBCardTitle>Oeste Servicios Sociales</MDBCardTitle>
+            <MDBCardText>C#, MySql.</MDBCardText>
+            <MDBBtn href='https://www.linkedin.com/company/oeste-servicios-sociales/'>Linkedin de la empresa</MDBBtn>
           </MDBCardBody>
         </MDBCard>
       </div>
