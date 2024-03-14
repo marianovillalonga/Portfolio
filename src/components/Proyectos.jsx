@@ -1,123 +1,63 @@
+// Proyectos.js
 import React from 'react';
-import styled from 'styled-components';
+import '../css/Proyectos.css';
 import imagenProyecto1 from '../img/proyecto1.jpg';
 import imagenProyecto2 from '../img/proyecto2.jpg';
 import imagenProyecto3 from '../img/proyecto3.jpg';
-
-const LinkButton = styled.a`
-  display: inline-block;
-  padding: 10px 20px;
-  color: #fff;
-  background-color: #3498db;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-
-  /* Estilo para el efecto :hover */
-  &:hover {
-    background-color: #2980b9; /* Cambia el color al pasar el mouse por encima */
-  }
-`;
 
 const Proyectos = () => {
   
   const proyectos = [
     {
       id: 1,
-      nombre: 'Proyecto 1',
+      nombre: 'Proyecto real en React',
       descripcion: 'Descripción del Proyecto 1...',
-      imagen: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/...',
-      enlace: imagenProyecto1
+      imagen: imagenProyecto1,
+      enlace: 'https://proyecto-carlos.netlify.app/',
+      github: 'https://github.com/marianovillalonga/proyectoRealCoder'
     },
     {
       id: 2,
-      nombre: 'Proyecto 2',
+      nombre: 'Control de gastos',
       descripcion: 'Descripción del Proyecto 2...',
-      imagen: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/...',
-      enlace: imagenProyecto2
+      imagen: imagenProyecto2,
+      enlace: 'https://control-gastos-mariano.netlify.app/',
+      github: 'https://github.com/marianovillalonga/Control-Gastos-React'
     },
     {
       id: 3,
-      nombre: 'Proyecto 3',
+      nombre: 'Proyecto Veterinaria',
       descripcion: 'Descripción del Proyecto 3...',
-      imagen: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/...',
-      enlace: imagenProyecto3
+      imagen: imagenProyecto3,
+      enlace: 'https://citas-prueba-cursoreact.netlify.app/',
+      github: 'https://github.com/marianovillalonga/React-Tailwind'
     },
   ];
 
   return (
-    <section style={styles.container} id="proyectos">
-      <h2 style={styles.title}>Mis Proyectos</h2>
-      <div style={styles.grid}>
-        {proyectos.map((proyecto) => (
-          <div key={proyecto.id} style={styles.card}>
-            <img src={proyecto.imagen} alt={proyecto.nombre} style={styles.image} />
-            <h3 style={styles.projectName}>{proyecto.nombre}</h3>
-            <p style={styles.description}>{proyecto.descripcion}</p>
-            <LinkButton href={proyecto.enlace} target="_blank" rel="noopener noreferrer">
-              Ver proyecto
-            </LinkButton>
+    <section className="container" id="proyectos">
+      <h2 className="title">Mis Proyectos</h2>
+      <div className="grid">
+        {proyectos.map((proyecto, index) => (
+          <div key={proyecto.id} className="card">
+            <div className={index % 2 === 0 ? 'content' : 'contentReverse'}>
+              <div>
+                <h3 className="projectName">{proyecto.nombre}</h3>
+                <p className="description">{proyecto.descripcion}</p>
+                <a className="linkButton" href={proyecto.enlace} target="_blank" rel="noopener noreferrer">
+                  Ver proyecto
+                </a>
+                <a className="githubButton" href={proyecto.github} target="_blank" rel="noopener noreferrer">
+                  Ver en GitHub
+                </a>
+              </div>
+              <img src={proyecto.imagen} alt={proyecto.nombre} className="image" />
+            </div>
           </div>
         ))}
       </div>
     </section>
   );
-};
-
-const styles = {
-  container: {
-    padding: '100px 0',
-    textAlign: 'center',
-  },
-  title: {
-    fontSize: '36px',
-    fontWeight: 'bold',
-    marginBottom: '30px',
-  },
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(2, 1fr)',
-    gap: '20px',
-    maxWidth: '1200px',
-    margin: '0 auto',
-  },
-  card: {
-    padding: '20px',
-    borderRadius: '5px',
-    textAlign: 'left',
-    backgroundColor: '#fff',
-    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
-    marginBottom: '20px',
-  },
-  image: {
-    width: '100%',
-    height: '200px',
-    objectFit: 'cover',
-    borderRadius: '5px',
-    marginBottom: '10px',
-  },
-  projectName: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    marginBottom: '10px',
-  },
-  description: {
-    fontSize: '16px',
-    marginBottom: '20px',
-  },
-  link: {
-    display: 'inline-block',
-    padding: '10px 20px',
-    color: '#fff',
-    backgroundColor: '#3498db',
-    borderRadius: '5px',
-    textDecoration: 'none',
-    transition: 'background-color 0.3s ease',
-    /* Nuevo estilo para el efecto :hover */
-    ':hover': {
-      backgroundColor: '#2980b9', // Cambia el color al pasar el mouse por encima
-    },
-  },
 };
 
 export default Proyectos;
