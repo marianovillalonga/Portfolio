@@ -17,7 +17,7 @@ function App() {
           <Inicio />
           <SobreMi />
           <Experiencia />
-          {/* <VistosoCard /> */}
+          <VistosoCard />
           <Proyectos />
           <Contacto />
           <Footer />

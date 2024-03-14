@@ -68,3 +68,17 @@
     display: flex;
     justify-content: space-between;
   }  
+  .skill-item-container {
+    display: flex;
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    margin-right: 20px; /* Agrega un margen a la derecha de cada skill-item */
+  }
+  
