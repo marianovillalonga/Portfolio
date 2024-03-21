@@ -1,0 +1,14 @@
+.footer-container {
+    position: relative;
+    height: 50vh; /* Ajustamos la altura al 50% de la ventana */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alineamos el contenido al final */
+}
+
+/* Ajustamos el tamaño del SVG */
+.footer-container svg {
+    width: 100%; /* Hacemos que el SVG ocupe el ancho completo */
+    height: auto; /* Permitimos que el alto se ajuste automáticamente */
+}

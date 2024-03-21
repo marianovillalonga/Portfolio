@@ -39,7 +39,7 @@ const styles = {
   container: {
     padding: '100px 0',
     textAlign: 'center',
-    background: 'linear-gradient(45deg, #3498db, #8e44ad)',
+    /* background: 'linear-gradient(45deg, #3498db, #8e44ad)', */
     color: '#fff',
   },
   content: {
@@ -51,10 +51,12 @@ const styles = {
     fontSize: '36px',
     fontWeight: 'bold',
     marginBottom: '30px',
+    color: '#000000'
   },
   description: {
     fontSize: '20px',
     marginBottom: '40px',
+    color: '#000000'
   },
   form: {
     textAlign: 'left',
@@ -67,6 +69,7 @@ const styles = {
     fontSize: '18px',
     fontWeight: 'bold',
     marginBottom: '5px',
+    color: '#000000'
   },
   input: {
     width: '100%',
@@ -74,6 +77,7 @@ const styles = {
     fontSize: '16px',
     borderRadius: '5px',
     border: '1px solid #ddd',
+    color: '#000000'
   },
   textarea: {
     width: '100%',
