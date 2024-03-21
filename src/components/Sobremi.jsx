@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import imagen from '../img/perfil.jpg';
-import cvPDF from '../img/MarianoVillalonga.pdf';
+import cvPDF from '../../public/MarianoVillalonga.pdf';
 import Skill from './Skill';
 
 const SobreMi = () => {
