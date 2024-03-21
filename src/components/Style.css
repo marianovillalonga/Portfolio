@@ -28,6 +28,7 @@
     width: 25%;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
+    margin-right: 20px;
   }
   .skill-item:hover {
     transform: scale(1.1);
@@ -70,8 +71,39 @@
   }  
   .skill-item-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
   }
 
+  .skill-item {
+      flex: 1 0 calc(25% - 20px);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+      max-width: calc(25% - 20px);
+  }
+  
+  @media screen and (max-width: 1200px) {
+      .skill-item {
+          flex: 1 0 calc(33.33% - 20px);
+          max-width: calc(33.33% - 20px);
+      }
+  }
+  
+  @media screen and (max-width: 900px) {
+      .skill-item {
+          flex: 1 0 calc(50% - 20px);
+          max-width: calc(50% - 20px);
+      }
+  }
+  
+  @media screen and (max-width: 600px) {
+      .skill-item {
+          flex: 1 0 calc(100% - 20px);
+          max-width: calc(100% - 20px);
+      }
+  }
+  
   .skill-item {
     display: flex;
     flex-direction: column;
@@ -79,6 +111,5 @@
     width: 25%;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
-    margin-right: 20px; /* Agrega un margen a la derecha de cada skill-item */
+    margin-right: 20px; 
   }
-  
