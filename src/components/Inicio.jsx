@@ -23,7 +23,7 @@ const Inicio = () => {
         />
       </svg>
       <div className="inicio-content">
-        <h1 className="inicio-title">¡Bienvenido a mi Portafolio!</h1>
+        <h1 className="inicio-title">¡Bienvenido a mi Portfolio!</h1>
         <p className="inicio-description">Aquí puedes encontrar información sobre mí y mis proyectos.</p>
       </div>
     </section>
